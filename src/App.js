@@ -1,16 +1,16 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import GlobalRouter from './routes/GlobalRouter';
-import {BookstoreContext} from "./context/BookstoreContext";
-import {Footer} from "./components/Footer";
-import {useBookstore} from "./hooks/useBookstore";
+import { BookstoreContext } from './context/BookstoreContext';
+import { Footer } from './components/Footer';
+import { useBookstore } from './hooks/useBookstore';
 
 function App() {
   const bookstore = useBookstore();
   return (
-      <BookstoreContext.Provider value={{bookstore}}>
-        <GlobalRouter></GlobalRouter>
-        <Footer />
-      </BookstoreContext.Provider>
+    <BookstoreContext.Provider value={{ bookstore }}>
+      <GlobalRouter />
+      <Footer />
+    </BookstoreContext.Provider>
   );
 }
 
