@@ -10,7 +10,7 @@ function Landing() {
         <div className="main-content">
             <div className="landing">
                 <img src={logo} alt="Logo" />
-                <Link to="/overview">
+                <Link to="/books">
                     <p>Explora los mejores libros en nuestra tienda virtual.</p>
                 </Link>
             </div>
