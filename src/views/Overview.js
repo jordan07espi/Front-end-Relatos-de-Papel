@@ -6,14 +6,12 @@ import {Footer} from "../components/Footer";
 import {BookstoreContext} from "../context/BookstoreContext";
 
 export const Overview = () => {
-
-  const { books } = useContext(BookstoreContext);
+  const { books = [] } = useContext(BookstoreContext); // Default to an empty array if books is undefined
 
   return (
       <div>
         <h2 className="center-text">Libros Disponibles</h2>
         <div className="restaurant-container">
-
           {
             books.length > 0 ? (
                 books.map((book, index) => (
@@ -31,7 +29,6 @@ export const Overview = () => {
                 <p>No hay libros disponibles.</p>
             )
           }
-          {}
         </div>
       </div>
   );
