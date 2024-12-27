@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
-import '../styles/styles.css'; // Asegúrate de crear un archivo CSS específico
+import { FaTrash } from 'react-icons/fa';
+import '../styles/styles.css';
 
 const Cart = () => {
     const { cart, removeFromCart, clearCart } = useContext(CartContext);
@@ -19,7 +20,7 @@ const Cart = () => {
                                 <span>${book.precio}</span>
                             </div>
                             <button onClick={() => removeFromCart(book.id)} className="remove-btn">
-                                Eliminar
+                                <FaTrash />
                             </button>
                         </li>
                     ))}

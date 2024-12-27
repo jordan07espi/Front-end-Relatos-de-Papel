@@ -70,8 +70,6 @@ body, html {
 
 
 /* HEADER */
-/* HEADER */
-
 .header {
     display: flex;
     align-items: center; /* Centra verticalmente los elementos */
@@ -246,7 +244,7 @@ body, html {
     position: fixed;
     top: 0;
     right: 0;
-    width: 100px;
+    width: 150px;
     height: 100vh;
     background-color: #fff;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);

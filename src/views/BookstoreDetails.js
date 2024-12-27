@@ -1,16 +1,23 @@
+// src/views/BookstoreDetails.js
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { BookstoreContext } from '../context/BookstoreContext';
+import { CartContext } from '../context/CartContext';
 import { FaHeart } from 'react-icons/fa';
 
 const BookstoreDetails = () => {
   const { id } = useParams();
   const { bookstore: books } = useContext(BookstoreContext);
+  const { addToCart } = useContext(CartContext);
   const book = books.find(b => b.id === id);
 
   if (!book) {
     return <h2>Libro no encontrado</h2>;
   }
+
+  const handleAddToCart = () => {
+    addToCart(book);
+  };
 
   return (
     <div className="book-details">
@@ -34,7 +41,7 @@ const BookstoreDetails = () => {
           <hr />
           <p>{book.sinopsis}</p>
           <div className="button-group">
-            <button className="add-to-cart">Agregar al carrito</button>
+            <button className="add-to-cart" onClick={handleAddToCart}>Agregar al carrito</button>
             <button className="wishlist"><FaHeart /></button>
           </div>
         </div>
