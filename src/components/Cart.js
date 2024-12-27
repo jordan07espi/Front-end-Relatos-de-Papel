@@ -1,10 +1,16 @@
-import React, { useContext } from 'react';
-import { CartContext } from '../context/CartContext';
+import React from 'react';
+import { useCart } from '../hooks/useCart';
 import { FaTrash } from 'react-icons/fa';
 import '../styles/styles.css';
 
 const Cart = () => {
-    const { cart, removeFromCart, clearCart, updateQuantity } = useContext(CartContext);
+    const {
+        cart = [], // Ensure cart is an empty array if undefined
+        removeFromCart,
+        clearCart,
+        updateQuantity,
+        getTotalPrice,
+    } = useCart();
 
     const handleQuantityChange = (id, event) => {
         const newQuantity = parseInt(event.target.value, 10);
@@ -19,32 +25,43 @@ const Cart = () => {
             {cart.length === 0 ? (
                 <p>El carrito está vacío</p>
             ) : (
-                <ul>
-                    {cart.map(book => (
-                        <li key={book.id} className="cart-item">
-                            <div className="cart-item-details">
-                                <span>{book.titulo}</span>
-                                <span>${book.precio}</span>
-                                <input
-                                    type="number"
-                                    min="1"
-                                    value={book.cantidad}
-                                    onChange={(e) => handleQuantityChange(book.id, e)}
-                                    className="quantity-input"
-                                />
-                            </div>
-                            <button onClick={() => removeFromCart(book.id)} className="remove-btn">
-                                <FaTrash />
-                            </button>
-                        </li>
-                    ))}
-                </ul>
-            )}
-            {cart.length > 0 && (
-                <div className="cart-actions">
-                    <button onClick={clearCart} className="clear-btn">Vaciar Carrito</button>
-                    <button className="checkout-btn">Proceder al Checkout</button>
-                </div>
+                <>
+                    <ul className="cart-items-list">
+                        {cart.map(book => (
+                            <li key={book.id} className="cart-item">
+                                <div className="cart-item-details">
+                                    <span className="cart-item-title">{book.titulo}</span>
+                                    <span className="cart-item-price">${book.precio}</span>
+                                    <input
+                                        type="number"
+                                        min="1"
+                                        value={book.cantidad}
+                                        onChange={(e) => handleQuantityChange(book.id, e)}
+                                        className="quantity-input"
+                                    />
+                                </div>
+                                <button
+                                    onClick={() => removeFromCart(book.id)}
+                                    className="remove-btn"
+                                    aria-label="Eliminar del carrito"
+                                >
+                                    <FaTrash />
+                                </button>
+                            </li>
+                        ))}
+                    </ul>
+                    <div className="cart-summary">
+                        <p>Total: <strong>${getTotalPrice().toFixed(2)}</strong></p>
+                    </div>
+                    <div className="cart-actions">
+                        <button onClick={clearCart} className="clear-btn">
+                            Vaciar Carrito
+                        </button>
+                        <button className="checkout-btn">
+                            Proceder al Pago
+                        </button>
+                    </div>
+                </>
             )}
         </div>
     );
