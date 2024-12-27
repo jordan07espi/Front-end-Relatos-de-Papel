@@ -1,18 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
+// src/components/Bookstore.js
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const Bookstore = ({ id, titulo, imagen, genero, popularidad, precio }) => {
-    return (
-        <div className="card">
-            <h3>{titulo}</h3>
-            <img src={imagen} alt={`Imagen de ${titulo}`} />
-            {/* <p>Sinopsis: {sinopsis}</p> */}
-            <p>Género: {genero}</p>
-            <p>Popularidad: {popularidad}</p>
-            <p>Precio: ${precio.toFixed(2)}</p>
-            <Link to={`/bookstore/${id}`}>
-                <button>Ver detalles</button>
-            </Link>
-        </div>
-    );
-}
+  return (
+    <div className="card">
+      <img src={imagen} alt={titulo} />
+      <h3>{titulo}</h3>
+      <p>Genero: {genero}</p>
+      <p>Popularidad: {popularidad}</p>
+      <p>Precio: ${precio}</p>
+      <Link to={`/books/${id}`}>
+        <button>DETALLES</button>
+      </Link>
+    </div>
+  );
+};
