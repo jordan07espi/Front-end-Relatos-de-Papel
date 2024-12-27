@@ -4,7 +4,14 @@ import { FaTrash } from 'react-icons/fa';
 import '../styles/styles.css';
 
 const Cart = () => {
-    const { cart, removeFromCart, clearCart } = useContext(CartContext);
+    const { cart, removeFromCart, clearCart, updateQuantity } = useContext(CartContext);
+
+    const handleQuantityChange = (id, event) => {
+        const newQuantity = parseInt(event.target.value, 10);
+        if (newQuantity > 0) {
+            updateQuantity(id, newQuantity);
+        }
+    };
 
     return (
         <div className="cart-sidebar">
@@ -18,6 +25,13 @@ const Cart = () => {
                             <div className="cart-item-details">
                                 <span>{book.titulo}</span>
                                 <span>${book.precio}</span>
+                                <input
+                                    type="number"
+                                    min="1"
+                                    value={book.cantidad}
+                                    onChange={(e) => handleQuantityChange(book.id, e)}
+                                    className="quantity-input"
+                                />
                             </div>
                             <button onClick={() => removeFromCart(book.id)} className="remove-btn">
                                 <FaTrash />

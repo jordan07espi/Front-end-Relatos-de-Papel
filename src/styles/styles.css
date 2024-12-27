@@ -329,6 +329,13 @@ body, html {
     background-color: #27ae60;
 }
 
+.quantity-input {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
 
 
