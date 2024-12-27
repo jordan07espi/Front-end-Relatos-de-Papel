@@ -269,15 +269,25 @@ body, html {
 
 .cart-item-details {
     flex-grow: 1;
+    text-align: left; /* Asegura que el texto dentro esté alineado a la izquierda */
+    display: flex;
+    flex-direction: column; /* Coloca el título y el precio en columnas */
+}
+
+.cart-item-details span {
+    margin-bottom: 5px; /* Agrega espacio entre título y precio */
 }
 
 .remove-btn {
     background-color: #e74c3c;
     color: #fff;
     border: none;
-    padding: 5px 10px;
-    cursor: pointer;
+    padding: 5px;
     border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .remove-btn:hover {
@@ -288,24 +298,27 @@ body, html {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-}
-
-.clear-btn, .checkout-btn {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 10px;
+    gap: 10px;
 }
 
 .clear-btn {
     background-color: #e74c3c;
     color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
 }
 
 .checkout-btn {
     background-color: #2ecc71;
     color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
 }
 
 .clear-btn:hover {
