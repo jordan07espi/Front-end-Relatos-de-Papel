@@ -61,19 +61,32 @@ body, html {
 
 /*Landing */
 .landing {
-    text-align: center;
-    position: relative;
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Alinea elementos en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    text-align: center; /* Asegura que el texto esté centrado */
 }
 
 .landing-text {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
+    font-size: 24px; /* Ajusta el tamaño de la fuente */
+    color: #000; /* Color negro */
+    margin-bottom: 20px; /* Espaciado entre el párrafo y la barra */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-weight: bold; /* Destaca el texto */
+}
+
+.landing a {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Hereda el color del padre */
 }
 
 .preload-container {
-    display: inline-block;
-    width: 45%;
+    display: flex;
+    width: 100%; /* Asegura que se extienda adecuadamente */
+    max-width: 600px; /* Limita el ancho máximo */
+    justify-content: center;
 }
 
 .preload-bar {
@@ -82,7 +95,6 @@ body, html {
     background-color: #f3f3f3;
     border-radius: 5px;
     overflow: hidden;
-    margin: 0 auto;
 }
 
 .preload-progress {
@@ -90,6 +102,8 @@ body, html {
     background-color: #3498db;
     transition: width 0.1s linear;
 }
+
+
 
 
 /* HEADER */
