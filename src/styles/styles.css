@@ -13,10 +13,25 @@ body, html {
 
 /* Contenido principal */
 .main-content {
-    flex: 1; /* Permite que el contenido principal ocupe el espacio restante */
+    flex: 1;
+    margin-right: 150px; /* Espacio reservado para el carrito */
+    box-sizing: border-box;
+    transition: margin-right 0.3s ease; /* Animación opcional */
 }
 
-/* styles.css */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -56,6 +71,17 @@ body, html {
   background-color: #0056b3;
 }
 
+@media (max-width: 768px) {
+    .main-content {
+        margin-right: 0; /* Elimina el margen cuando el carrito no es visible */
+    }
+
+    .cart-sidebar {
+        width: 100%; /* Carrito ocupa toda la pantalla */
+        height: auto;
+        position: static; /* Coloca el carrito debajo de las tarjetas */
+    }
+}
 
 
 
