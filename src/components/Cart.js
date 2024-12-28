@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useCart } from '../hooks/useCart';
 import { FaTrash } from 'react-icons/fa';
 import '../styles/styles.css';
 
 const Cart = () => {
     const {
-        cart = [], // Ensure cart is an empty array if undefined
+        cart = [],
         removeFromCart,
         clearCart,
         updateQuantity,
@@ -57,9 +58,9 @@ const Cart = () => {
                         <button onClick={clearCart} className="clear-btn">
                             Vaciar Carrito
                         </button>
-                        <button className="checkout-btn">
+                        <Link to="/checkout" className="checkout-btn">
                             Proceder al Pago
-                        </button>
+                        </Link>
                     </div>
                 </>
             )}

@@ -87,31 +87,31 @@ body, html {
 
 /*Landing */
 .landing {
-    display: flex; /* Activa Flexbox */
-    flex-direction: column; /* Alinea elementos en columna */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-    text-align: center; /* Asegura que el texto esté centrado */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
 }
 
 .landing-text {
-    font-size: 24px; /* Ajusta el tamaño de la fuente */
-    color: #000; /* Color negro */
-    margin-bottom: 20px; /* Espaciado entre el párrafo y la barra */
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    font-weight: bold; /* Destaca el texto */
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .landing a {
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    color: inherit; /* Hereda el color del padre */
+    text-decoration: none;
+    color: inherit;
 }
 
 .preload-container {
     display: flex;
-    width: 100%; /* Asegura que se extienda adecuadamente */
-    max-width: 600px; /* Limita el ancho máximo */
+    width: 100%;
+    max-width: 600px;
     justify-content: center;
 }
 
@@ -135,8 +135,8 @@ body, html {
 /* HEADER */
 .header {
     display: flex;
-    align-items: center; /* Centra verticalmente los elementos */
-    justify-content: space-between; /* Coloca el logo a la izquierda y el resto al centro/derecha */
+    align-items: center;
+    justify-content: space-between;
     padding: 10px 20px;
     background-color: #ebebeb;
 }
@@ -148,9 +148,9 @@ body, html {
 
 .header-search-container {
     display: flex;
-    align-items: center; /* Centra verticalmente la barra e íconos */
+    align-items: center;
     flex-grow: 1;
-    justify-content: center; /* Centra horizontalmente la barra de búsqueda */
+    justify-content: center;
 }
 
 .header-search {
@@ -164,9 +164,9 @@ body, html {
 
 .header-icons {
     display: flex;
-    align-items: center; /* Centra verticalmente los íconos */
-    gap: 15px; /* Espacio entre los íconos */
-    margin-left: 15px; /* Separa los íconos de la barra de búsqueda */
+    align-items: center;
+    gap: 15px;
+    margin-left: 15px;
 }
 
 .header-icon {
@@ -177,7 +177,7 @@ body, html {
 }
 
 .header-icon:hover {
-    color: #007BFF; /* Cambia el color al pasar el cursor */
+    color: #007BFF;
 }
 
 
@@ -233,7 +233,7 @@ body, html {
 }
 
 .details-content h2 {
-    margin: 0 0 5px; /* Reduce the bottom margin */
+    margin: 0 0 5px;
     font-size: 24px;
     color: #333;
 }
@@ -242,7 +242,7 @@ body, html {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 5px 0 10px; /* Adjust the margins to be closer to the title */
+    margin: 5px 0 10px;
 }
 
 .ratings span {
@@ -250,7 +250,7 @@ body, html {
 }
 
 .price {
-    font-size: 30px; /* Increase the font size */
+    font-size: 30px;
     font-weight: bold;
     color: #333;
     margin: 10px 0;
@@ -332,13 +332,13 @@ body, html {
 
 .cart-item-details {
     flex-grow: 1;
-    text-align: left; /* Asegura que el texto dentro esté alineado a la izquierda */
+    text-align: left;
     display: flex;
-    flex-direction: column; /* Coloca el título y el precio en columnas */
+    flex-direction: column;
 }
 
 .cart-item-details span {
-    margin-bottom: 5px; /* Agrega espacio entre título y precio */
+    margin-bottom: 5px;
 }
 
 .remove-btn {
@@ -382,6 +382,7 @@ body, html {
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
+    text-decoration: none;
 }
 
 .clear-btn:hover {
@@ -400,6 +401,51 @@ body, html {
     border-radius: 5px;
 }
 
+/*PAGO*/
+.checkout-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.payment-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.order-summary {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.checkout-buttons button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.hide-sidebar .cart-sidebar {
+    display: none;
+}
+
 
 
 
@@ -412,8 +458,8 @@ body, html {
     color: #555;
     margin: 0;
     box-sizing: border-box;
-    flex-shrink: 0; /* Asegura que el footer no se reduzca */
-    margin-top: auto; /* Empuja el footer al final si el contenido es corto */
+    flex-shrink: 0;
+    margin-top: auto;
 }
 
 .footer-content {
