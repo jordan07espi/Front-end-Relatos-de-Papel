@@ -402,11 +402,10 @@ body, html {
 }
 
 /*PAGO*/
-.checkout-container {
+.checkout-content {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 20px;
 }
 
 .payment-section {
@@ -415,11 +414,13 @@ body, html {
     gap: 10px;
 }
 
+/* Order summary styles */
 .order-summary {
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 8px;
+    margin-left: auto; /* Empuja el contenedor hacia la derecha */
+    margin-right: 0;   /* Asegura que quede alineado hacia el borde derecho */
+    width: 300px;      /* Ajusta el ancho según sea necesario */
 }
+
 
 .summary-item {
     display: flex;
@@ -434,14 +435,38 @@ body, html {
     margin-top: 20px;
 }
 
+/* Buttons styles */
 .checkout-buttons button {
     margin-right: 10px;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    background-color: #2ecc71; /* Default blue button */
+    color: #ffffff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
+.checkout-buttons button:hover {
+    background-color: #27ae60; /* Darker blue on hover */
+}
 
+/* Cancel button specific styles */
+.checkout-buttons .cancel-button {
+    background-color: #dc3545; /* Red */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-buttons .cancel-button:hover {
+    background-color: #a71d2a; /* Darker red on hover */
+}
+
+/* Utility classes */
 .hide-sidebar .cart-sidebar {
     display: none;
 }
