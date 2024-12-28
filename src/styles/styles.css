@@ -403,24 +403,26 @@ body, html {
 
 /*PAGO*/
 .checkout-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: flex; /* Diseño horizontal */
+    justify-content: space-between; /* Espaciado máximo entre secciones */
+    align-items: flex-start; /* Alineación superior */
+    gap: 20px; /* Espaciado entre bloques */
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
 }
 
 .payment-section {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex: 1; /* Ocupa todo el espacio sobrante */
+    max-width: 60%; /* Ajusta el ancho máximo si es necesario */
 }
 
-/* Order summary styles */
 .order-summary {
-    margin-left: auto; /* Empuja el contenedor hacia la derecha */
-    margin-right: 0;   /* Asegura que quede alineado hacia el borde derecho */
-    width: 300px;      /* Ajusta el ancho según sea necesario */
+    flex: 0 0 300px; /* Ancho fijo para el resumen */
+    border: 1px solid #ddd; /* Borde opcional */
+    padding: 20px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Fondo claro */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: left; /* Alineación del contenido */
 }
-
 
 .summary-item {
     display: flex;
@@ -435,42 +437,39 @@ body, html {
     margin-top: 20px;
 }
 
-/* Buttons styles */
+/* Botones */
+.checkout-buttons {
+    margin-top: 20px; /* Espaciado superior */
+    display: flex;
+    gap: 10px; /* Espaciado entre botones */
+}
+
 .checkout-buttons button {
-    margin-right: 10px;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    background-color: #2ecc71; /* Default blue button */
+    background-color: #2ecc71; /* Verde por defecto */
     color: #ffffff;
     border-radius: 4px;
     transition: background-color 0.3s ease;
 }
 
 .checkout-buttons button:hover {
-    background-color: #27ae60; /* Darker blue on hover */
+    background-color: #27ae60; /* Verde más oscuro al pasar el mouse */
 }
 
-/* Cancel button specific styles */
 .checkout-buttons .cancel-button {
-    background-color: #dc3545; /* Red */
-    color: #ffffff; /* White text */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #dc3545; /* Rojo */
 }
 
 .checkout-buttons .cancel-button:hover {
-    background-color: #a71d2a; /* Darker red on hover */
+    background-color: #a71d2a; /* Rojo más oscuro al pasar el mouse */
 }
 
-/* Utility classes */
-.hide-sidebar .cart-sidebar {
+/* styles.css */
+body.hide-sidebar .cart-sidebar {
     display: none;
 }
-
 
 
 

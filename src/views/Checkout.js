@@ -25,8 +25,9 @@ const Checkout = () => {
         <div className="book-details">
             <div className="details-container">
                 <div className="checkout-content">
-                    <h2>Método de pago</h2>
+                    {/* Sección de método de pago */}
                     <div className="payment-section">
+                        <h2>Método de pago</h2>
                         <div>
                             <input type="radio" name="payment" id="credit-card" defaultChecked/>
                             <label htmlFor="credit-card">Tarjeta de crédito</label>
@@ -35,12 +36,21 @@ const Checkout = () => {
                             <input type="radio" name="payment" id="paypal"/>
                             <label htmlFor="paypal">PayPal</label>
                         </div>
+                        {/* Botones de acción */}
+                        <div className="checkout-buttons">
+                            <button onClick={handlePayment}>Pagar ahora</button>
+                            <button className="cancel-button" onClick={() => navigate("/books")}>
+                                Cancelar
+                            </button>
+                        </div>
                     </div>
+
+                    {/* Sección de resumen de pedido */}
                     <div className="order-summary">
                         <h3>Resumen de pedido</h3>
                         {cart.map((item) => (
                             <div key={item.id} className="summary-item">
-                                <span>{item.name}</span>
+                                <span>{item.titulo}</span>
                                 <span>${(item.precio * item.cantidad).toFixed(2)}</span>
                             </div>
                         ))}
@@ -48,11 +58,8 @@ const Checkout = () => {
                             <strong>Total:</strong> ${getTotalPrice().toFixed(2)}
                         </div>
                     </div>
-                    <div className="checkout-buttons">
-                        <button onClick={handlePayment}>Pagar ahora</button>
-                        <button className="cancel-button" onClick={() => navigate("/books")}>Cancelar</button>
-                    </div>
                 </div>
+
             </div>
         </div>
     );
