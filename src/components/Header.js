@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/hizotipoBlack.png";
 import { FaShoppingCart, FaHeart, FaUser } from "react-icons/fa";
-import "../styles/styles.css";
+import "../styles/header.css";
 import Cart from "../components/Cart"; // Importa el componente Cart
 
 export const Header = ({ onSearch }) => {

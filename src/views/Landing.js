@@ -1,7 +1,9 @@
+// src/views/Landing.js
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useRedirection from '../hooks/useRedirection';
 import logo from '../assets/hizotipoBlack.png';
+import '../styles/landing.css'; // Importa el archivo CSS específico
 
 function Landing() {
     useRedirection('/books', 5000); // Redirect to the overview page after 5 seconds

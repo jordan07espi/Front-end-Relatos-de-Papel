@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { BookstoreContext } from '../context/BookstoreContext';
 import { CartContext } from '../context/CartContext';
 import { FaHeart } from 'react-icons/fa';
+import '../styles/booksDetails.css'; // Import the specific CSS file
 
 const BookstoreDetails = () => {
   const { id } = useParams();

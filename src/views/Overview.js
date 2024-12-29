@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import '../styles/styles.css';
+import '../styles/overview.css';
 import { Bookstore } from "../components/Bookstore";
 import { BookstoreContext } from "../context/BookstoreContext";
 import { SearchContext } from "../context/SearchContext";

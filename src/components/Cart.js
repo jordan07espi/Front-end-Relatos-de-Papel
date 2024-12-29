@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../hooks/useCart';
 import { FaTrash } from 'react-icons/fa';
-import '../styles/styles.css';
+import '../styles/carrito.css';
 
 const Cart = () => {
     const {

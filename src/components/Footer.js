@@ -1,4 +1,7 @@
+// src/components/Footer.js
+import React from 'react';
 import logo from '../assets/hizotipoBlack.png';
+import '../styles/footer.css';
 
 export const Footer = () => {
     return (
