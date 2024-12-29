@@ -40,13 +40,16 @@ const Layout = ({ children }) => {
     setSearchQuery(query);
   };
 
+  const isLandingPage = location.pathname === "/";
+
   return (
       <div className="layout">
         <div className="main-content">
-          {location.pathname !== "/" && <Header onSearch={handleSearch} />}
+          {!isLandingPage && <Header onSearch={handleSearch} />}
           {children}
         </div>
-        {location.pathname !== "/" && <Cart />}
+        {!isLandingPage && <Cart />}
+        {!isLandingPage && <Footer />}
       </div>
   );
 };

@@ -14,27 +14,29 @@ export const Header = ({ onSearch }) => {
     };
 
     const toggleCartVisibility = () => {
-        setIsCartVisible(!isCartVisible); // Alternar visibilidad del carrito
+        setIsCartVisible((prev) => !prev); // Alternar visibilidad del carrito
     };
 
     return (
         <header className="header">
-            <img src={logo} alt="Logo" className="header-logo" />
-            <div className="header-search-container">
-                <input
-                    type="text"
-                    placeholder="Buscar por autor, código, título de libro..."
-                    className="header-search"
-                    value={searchQuery}
-                    onChange={handleInputChange}
-                />
-                <div className="header-icons">
-                    <FaHeart className="header-icon" />
-                    <FaUser className="header-icon" />
-                    <FaShoppingCart
-                        className="header-icon"
-                        onClick={toggleCartVisibility} // Alternar visibilidad del carrito
+            <div className="header-content">
+                <img src={logo} alt="Logo" className="header-logo" />
+                <div className="header-search-container">
+                    <input
+                        type="text"
+                        placeholder="Buscar por autor, código, título de libro..."
+                        className="header-search"
+                        value={searchQuery}
+                        onChange={handleInputChange}
                     />
+                    <div className="header-icons">
+                        <FaHeart className="header-icon" />
+                        <FaUser className="header-icon" />
+                        <FaShoppingCart
+                            className="header-icon"
+                            onClick={toggleCartVisibility} // Alternar visibilidad del carrito
+                        />
+                    </div>
                 </div>
             </div>
             {isCartVisible && <Cart />} {/* Mostrar carrito desde el Header */}
