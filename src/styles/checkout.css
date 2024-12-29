@@ -1,66 +1,79 @@
-/*PAGO*/
-.checkout-content {
-    display: flex; /* Diseño horizontal */
-    justify-content: space-between; /* Espaciado máximo entre secciones */
-    align-items: flex-start; /* Alineación superior */
-    gap: 20px; /* Espaciado entre bloques */
-    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+/* styles/checkout.css */
+.checkout-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
 }
 
-.payment-section {
-    flex: 1; /* Ocupa todo el espacio sobrante */
-    max-width: 60%; /* Ajusta el ancho máximo si es necesario */
+.checkout-details-container {
+    display: flex;
+    gap: 20px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.order-summary {
-    flex: 0 0 300px; /* Ancho fijo para el resumen */
-    border: 1px solid #ddd; /* Borde opcional */
-    padding: 20px; /* Espaciado interno */
-    background-color: #f9f9f9; /* Fondo claro */
-    border-radius: 8px; /* Bordes redondeados */
-    text-align: left; /* Alineación del contenido */
+
+
+.payment-method-section {
+    flex: 1; /* Occupies all remaining space */
+    max-width: 60%; /* Adjust the maximum width if necessary */
 }
 
-.summary-item {
+.order-summary-section {
+    flex: 0 0 300px; /* Fixed width for the summary */
+    border: 1px solid #ddd; /* Optional border */
+    padding: 20px; /* Internal spacing */
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 8px; /* Rounded borders */
+    text-align: left; /* Content alignment */
+}
+
+.summary-item-row {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
 }
 
-.summary-total {
+.summary-total-row {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
     margin-top: 20px;
 }
 
-/* Botones */
-.checkout-buttons {
-    margin-top: 20px; /* Espaciado superior */
+/* Buttons */
+.checkout-buttons-group {
+    margin-top: 20px; /* Top spacing */
     display: flex;
-    gap: 10px; /* Espaciado entre botones */
+    gap: 10px; /* Spacing between buttons */
 }
 
-.checkout-buttons button {
+.checkout-buttons-group button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    background-color: #2ecc71; /* Verde por defecto */
+    background-color: #2ecc71; /* Default green */
     color: #ffffff;
     border-radius: 4px;
     transition: background-color 0.3s ease;
 }
 
-.checkout-buttons button:hover {
-    background-color: #27ae60; /* Verde más oscuro al pasar el mouse */
+.checkout-buttons-group button:hover {
+    background-color: #27ae60; /* Darker green on hover */
 }
 
-.checkout-buttons .cancel-button {
-    background-color: #dc3545; /* Rojo */
+.checkout-buttons-group .cancel-button {
+    background-color: #dc3545; /* Red */
 }
 
-.checkout-buttons .cancel-button:hover {
-    background-color: #a71d2a; /* Rojo más oscuro al pasar el mouse */
+.checkout-buttons-group .cancel-button:hover {
+    background-color: #a71d2a; /* Darker red on hover */
 }
 
 /* styles.css */

@@ -1,4 +1,3 @@
-// src/views/BookstoreDetails.js
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { BookstoreContext } from '../context/BookstoreContext';
@@ -21,29 +20,29 @@ const BookstoreDetails = () => {
   };
 
   return (
-    <div className="book-details">
-      <div className="details-container">
-        <div className="image-gallery">
-          <img src={book.imagen} alt={book.titulo} className="main-image" />
-          <div className="thumbnail-gallery">
+    <div className="bookstore-details">
+      <div className="bookstore-details-container">
+        <div className="bookstore-image-gallery">
+          <img src={book.imagen} alt={book.titulo} className="bookstore-main-image" />
+          <div className="bookstore-thumbnail-gallery">
             <img src={book.imagen} alt="Thumbnail 1" />
             <img src={book.imagen} alt="Thumbnail 2" />
             <img src={book.imagen} alt="Thumbnail 3" />
           </div>
         </div>
-        <div className="details-content">
+        <div className="bookstore-details-content">
           <h2>{book.titulo}</h2>
-          <div className="ratings">
+          <div className="bookstore-ratings">
             <span>⭐⭐⭐⭐☆</span>
             <p>4 Reseñas</p>
           </div>
           <hr />
-          <p className="price">${book.precio}</p>
+          <p className="bookstore-price">${book.precio}</p>
           <hr />
           <p>{book.sinopsis}</p>
-          <div className="button-group">
-            <button className="add-to-cart" onClick={handleAddToCart}>Agregar al carrito</button>
-            <button className="wishlist"><FaHeart /></button>
+          <div className="bookstore-button-group">
+            <button className="bookstore-add-to-cart" onClick={handleAddToCart}>Agregar al carrito</button>
+            <button className="bookstore-wishlist"><FaHeart /></button>
           </div>
         </div>
       </div>

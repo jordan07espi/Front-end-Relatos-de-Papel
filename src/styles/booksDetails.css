@@ -1,12 +1,12 @@
-/*BOOKSDETAILS*/
-.book-details {
+/* styles/booksDetails.css */
+.bookstore-details {
     display: flex;
     justify-content: center;
     padding: 20px;
-    background-color: #f8f8f8;
+
 }
 
-.details-container {
+.bookstore-details-container {
     display: flex;
     gap: 20px;
     background: #ffffff;
@@ -18,23 +18,23 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.image-gallery {
+.bookstore-image-gallery {
     flex: 1;
 }
 
-.main-image {
+.bookstore-main-image {
     width: 50%;
     height: auto;
     border-radius: 8px;
 }
 
-.thumbnail-gallery {
+.bookstore-thumbnail-gallery {
     display: flex;
     gap: 5px;
     margin-top: 10px;
 }
 
-.thumbnail-gallery img {
+.bookstore-thumbnail-gallery img {
     width: 50px;
     height: 50px;
     object-fit: cover;
@@ -42,50 +42,50 @@
     border-radius: 4px;
 }
 
-.details-content {
+.bookstore-details-content {
     flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.details-content h2 {
+.bookstore-details-content h2 {
     margin: 0 0 5px;
     font-size: 24px;
     color: #333;
 }
 
-.ratings {
+.bookstore-ratings {
     display: flex;
     align-items: center;
     gap: 10px;
     margin: 5px 0 10px;
 }
 
-.ratings span {
+.bookstore-ratings span {
     color: #f5c518;
 }
 
-.price {
+.bookstore-price {
     font-size: 30px;
     font-weight: bold;
     color: #333;
     margin: 10px 0;
 }
 
-.details-content p {
+.bookstore-details-content p {
     margin: 10px 0;
     color: #555;
 }
 
-.details-content hr {
+.bookstore-details-content hr {
     border: 0;
     height: 1px;
     background: #ccc;
     margin: 10px 0;
 }
 
-.add-to-cart, .wishlist {
+.bookstore-add-to-cart, .bookstore-wishlist {
     padding: 10px 20px;
     margin-top: 10px;
     font-size: 16px;
@@ -94,26 +94,26 @@
     cursor: pointer;
 }
 
-.add-to-cart {
+.bookstore-add-to-cart {
     background-color: #007bff;
     color: #fff;
 }
 
-.add-to-cart:hover {
+.bookstore-add-to-cart:hover {
     background-color: #0056b3;
 }
 
-.button-group {
+.bookstore-button-group {
     display: flex;
     gap: 10px;
 }
 
-.wishlist {
+.bookstore-wishlist {
     background-color: transparent;
     color: #333;
     font-size: 24px;
 }
 
-.wishlist:hover {
+.bookstore-wishlist:hover {
     color: #ff0000;
 }
