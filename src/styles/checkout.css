@@ -80,3 +80,39 @@
 body.hide-sidebar .cart-sidebar {
     display: none;
 }
+
+
+/* Tarjeta de crédito */
+.credit-card-form {
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+.credit-card-form input {
+    width: 96%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.credit-card-form input:focus {
+    border-color: #2ecc71;
+}
+
+.credit-card-details {
+    display: flex;
+    gap: 10px;
+}
+
+.credit-card-details input {
+    flex: 1;
+}
