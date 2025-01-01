@@ -9,7 +9,7 @@ import { Footer } from "../components/Footer";
 import { SearchProvider, SearchContext } from "../context/SearchContext";
 import { CartProvider } from "../context/CartContext";
 import Cart from "../components/Cart";
-import Checkout from "../views/Checkout"; // Importamos el componente Checkout
+import Checkout from "../views/Checkout"; 
 import "../styles/styles.css";
 
 function GlobalRouter() {
@@ -22,7 +22,7 @@ function GlobalRouter() {
                 <Route path="/" element={<Landing />} />
                 <Route path="/books" element={<Overview />} />
                 <Route path="/books/:id" element={<BookstoreDetails />} />
-                <Route path="/checkout" element={<Checkout />} /> {/* Nueva ruta */}
+                <Route path="/checkout" element={<Checkout />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Layout>
